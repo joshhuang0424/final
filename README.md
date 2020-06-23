@@ -1,73 +1,38 @@
-# Neighbourhood Map Project
+B07701212 工管二 黃泇喜
 
-* Open and view the Project using the `.zip` file provided or at my [Github Repository](https://github.com/madhur-taneja/Front-End-Projects) having folder `Neighborhood Map`.
-* The project is also hosted [here](https://madhur-taneja.github.io/Front-End-Projects/Project%208%20(Neighborhood%20Map)/index.html).
+專案主題: 公館美食獵人
+此專案的目的是打造一個"美食地圖"，並以台大為中心，成列美食列表並標示在Google地圖上。
 
-## Getting started
+API reference: 
+[Google Maps API](https://developers.google.com/maps/web/) 
+[Foursquare API](https://foursquare.com/developers/app/XQ2I0ONGSSVL1DYQYSK2Q0ERIM5ASTRANA5FRG41HTTXVKQB) 
 
-* The aim of this Project is to make a "Map of a Neighborhood" showing famous local Eating Joints with their ratings.
+操作及功能說明:
 
-#### Tools required:
-* [Google Maps API](https://developers.google.com/maps/web/) to load map.
-* [Foursquare API](https://foursquare.com/developers/app/XQ2I0ONGSSVL1DYQYSK2Q0ERIM5ASTRANA5FRG41HTTXVKQB) to fetch data for the eating joints.
-* [Foursquare API Explorer] to fetch ratings(or other details if required).
-* [Knockout Javascript](http://knockoutjs.com/downloads/knockout-3.4.2.js) to bind data.
-* [jQuery](https://code.jquery.com/jquery-3.2.1.min.js) (Javascript Library) for easier coding of javascript.
-* [Bootstrap](https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css) to make the page responsive.
-* [Google Fonts](https://fonts.google.com/specimen/Pacifico?selection.family=Pacifico) to add stylish text.
-* [Color-Hex](http://www.color-hex.com/) to add hexa-decimal color codes in css.
-* [HTML Beautifier](http://www.freeformatter.com/html-formatter.html) to Beautify HTML.
-* [CSS Beautifier](http://www.freeformatter.com/css-beautifier.html) to Beautify CSS.
-* [JS Beautifier](http://www.freeformatter.com/javascript-beautifier.html) to Beautify JS.
-* [Online Markdown Editor](http://dillinger.io/) to test `README.md`.
-* [Google Maps Animation](https://developers.google.com/maps/documentation/javascript/examples/marker-animations) to animate markers.
+當打開html檔，可以看到google map的初始座標設定在台大校園，而裡面有五家我初始設定的餐廳。
+分別是Yu Poke, 麥當勞公館店, 漢堡王公館店, 池先生 和 馬辣。
+並且已經標示在google map上，我選擇這五間店分別散落在台大的不同方向，
+因此使用的情境舉例來說: 當今天在博雅大樓上去，而想看博雅附近的美食有什麼，
+就可以查看此網頁離博雅附近的美食來挑選餐廳!
 
-#### References:
-> [Udacity's Github Repository](https://github.com/udacity/ud864)
-* This repository was provided in [Lesson 17](https://classroom.udacity.com/nanodegrees/nd001/parts/e87c34bf-a9c0-415f-b007-c2c2d7eead73/modules/4fd8d440-9428-4de7-93c0-4dca17a36700/lessons/8304370457/concepts/83122494440923).
-* References for /* -----S-H-O-W---A-N-D---H-I-D-E---F-U-N-C-T-I-O-N-S---F-O-R---M-A-R-K-E-R-S */, /* -----M-A-R-K-E-R-----S-T-Y-L-I-N-G----- */, /* -----D-R-A-W-I-N-G-----T-O-O-L-B-A-R----- */ were taken from [here](https://github.com/udacity/ud864/blob/master/Project_Code_7_Drawing.html).
-> References for Knockout Javascript were taken from [here](http://knockoutjs.com/documentation/event-binding.html).
-> References for creating Navbar from [here](https://codepen.io/simoberny/pen/pJZJQY).
 
-## Steps to run the app:
-> Open the project through the `.zip` file provided and extract file.
-> To open `Index.html`:
-* Open the main folder.
-* Open `Index.html`.
-* Click on the list or the markers on map to see ratings for that particular Eating Joint.
-> To open `app.js`:
-* Open `js` folder in `main` folder.
-* Open `app.js`.
+額外功能:
 
-## Steps to make the app:
-#### Part 1: Google Maps API and Foursquare API
-* Generate a unique key from [Google Maps API](https://developers.google.com/maps/web/) and create `Index.html`.
-* Set the center and zoom accordingly.
-* Sign up on `foursquare.com`, create a new app which which provide `CLIENT_ID` and `CLIENT_SECRET` for that app. These unique ID's will be used for fetching data from `foursquare.com` using `AJAX`.
+    1.首先我在當中添加了『關鍵字查詢』的功能，也就是假設你在欄位裡面搜尋『馬』，
+    就會只顯示其中帶有『馬』字的餐廳，像是馬辣。
 
-#### Part 2: Include jQuery and Knockout Javascript
-* Use the above mentioned links and append them in `Index.html`.
+    2.第二點是我還使用了『選取範圍』的功能，也就是使用者可以自由在地圖上圈出一個不規則的範圍，
+    而餐廳的標記點就只會顯示該範圍內的餐廳。
+    
+    3.在你的口袋名單列表裡面，隨意選取其中一個餐廳，該餐廳地圖上的點就會跳兩下來顯示。
+    並且該餐廳的名稱會顯示在點上。
+    
+獨特之處與新的:
+基本上這次的project我使用到api的技術，把google map呈現在網頁上。
+同時也有『選取範圍』和『關鍵字查詢』這樣比較需要javascript去處理的複雜功能，
+因此也是花了我許多時間，但我對於成品感到非常的滿意。
+最後我覺得這個網頁真的具備實用性，畢竟台大餐廳太多常常不知道該吃什麼，時常突然想不到餐廳。
+這個網頁不但能解決此困難也能限縮範圍根據在哪上課決定要吃什麼。
+同時框架分得非常明確，使用者能一目了然，希望能在這個課程結束後，繼續的改良和美化我的網站!
 
-#### Part 3: Include CSS file, Bootstrap library and Google Fonts
-* Create a `style.css` file in `css folder` with all required styling and link it to `Index.html`.
-* Use the above mentioned link for `Bootstrap` and link it in `Index.html`.
-* Use the above mentioned link for `Google Fonts` and link it in `Index.html` and `style.css`.
 
-#### Part 4: Creating and coding Javascript in app.js and init.js
-> Create `initMap` and `navToggle` functions in `init.js`.
-> Now in `app.js`, Create an object of eating joints with their name, coordinates and unique Id generated from [foursquare.com].
-> Create `Viewmodel` function with functions to:
-* Create Markers.
-* Fetch information for Markers from [foursquare.com] using `AJAX` request.
-* Create Infowindows with relevent information.
-* Display information fetched from [Foursquare API Explorer] on clicking them.
-* Style Markers. 
-* Show selected Marker.
-* Bind data for `Search Bar` using `Knockout Javascript`. 
-* Show and Hide Markers.
-* Create, toggle and add features to `Drawing Toolbar`.
-
-App is completed! Have fun exploring delicious places!
-
-[foursquare.com]: <https://foursquare.com/explore?mode=url&ne=28.596279%2C77.060477&q=Food&sw=28.585784%2C77.045778)>
-[Foursquare API Explorer]: <https://developer.foursquare.com/docs/explore#req=venues/50d6d789498ee282996ddce4>
